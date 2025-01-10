@@ -174,8 +174,29 @@ Terminal 2:
 roslaunch allegro_hand_controllers allegro_hand.launch NUM:=1 CAN_DEVICE:=/dev/pcanusb33 AUTO_CAN:=false KEYBOARD:=true
 ~~~
 
-## Moveit!
+### RS-485 Communication
 
+1. Specify the can device:
+~~~bash
+ls -l /dev/ttyUSB*
+~~~
+
+2. Open two terminals and source the allegro hand workspace.
+
+3. Launch Allegro Hand packages using command below.
+
+Terminal 1:
+~~~bash
+roslaunch allegro_hand_controllers allegro_hand.launch RS485:=true NUM:=0 PORT:=/dev/ttyUSB0 KEYBOARD:=true
+~~~
+Terminal 2:
+~~~bash
+roslaunch allegro_hand_controllers allegro_hand.launch RS485:=true NUM:=1 PORT:=/dev/ttyUSB1 KEYBOARD:=true
+~~~
+
+**These are example commands.You may need to change CAN_DEVICE, PORT and NUM arguments accroding to your system.** 
+
+## Moveit!
 1. Start Moveit
 ~~~bash
 roslaunch allegro_hand_controllers allegro_hand.launch MOVEIT:=true KEYBOARD:=true
