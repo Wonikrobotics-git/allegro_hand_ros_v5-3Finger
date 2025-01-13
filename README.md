@@ -245,9 +245,12 @@ roslaunch allegro_hand_controllers allegro_hand.launch GUI:=true
 - Spherical Home : Home pose for grasping spehrical object
 - Grasp: 3finger Grap pose
 - Off:  Torqueoff
-- Save
-	1. Select pose number or type pose fiel name to save.
-	2. Save current joint of Moveit in yaml.
+- Save(RS-485)
+	1. Select pose number to save.
+	2. Save current joints in Hand's memory.
+- Save(CAN)
+  	1. Type file name to save.
+  	2. Save current joints to yaml.
 - Move
 	1. Select Pose number or pose file.
 	2. Move Allegro Hand to saved pose.
