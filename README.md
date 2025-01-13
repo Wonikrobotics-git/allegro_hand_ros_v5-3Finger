@@ -204,8 +204,8 @@ roslaunch allegro_hand_controllers allegro_hand.launch MOVEIT:=true KEYBOARD:=tr
 
 2. Select joints menu and setup goal position of each joint.
 
-![Screenshot from 2025-01-13 09-50-38](https://github.com/user-attachments/assets/892ac47c-1b6c-4b2c-a39d-2cbeeac8bd63){: width="100" height="100"}
-![Screenshot from 2025-01-13 09-50-54](https://github.com/user-attachments/assets/fae61a54-ce56-43ed-a49b-dec268de7ed0)
+<img src="https://github.com/user-attachments/assets/892ac47c-1b6c-4b2c-a39d-2cbeeac8bd63" width="300">
+(https://github.com/user-attachments/assets/fae61a54-ce56-43ed-a49b-dec268de7ed0)
 
 
 
