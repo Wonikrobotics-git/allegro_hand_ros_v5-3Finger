@@ -196,7 +196,7 @@ roslaunch allegro_hand_controllers allegro_hand.launch RS485:=true NUM:=1 PORT:=
 
 **These are example commands.You may need to change CAN_DEVICE, PORT and NUM arguments accroding to your system.** 
 
-## Moveit!
+## Moveit!(Only for CAN)
 1. Start Moveit
 ~~~bash
 roslaunch allegro_hand_controllers allegro_hand.launch MOVEIT:=true KEYBOARD:=true
