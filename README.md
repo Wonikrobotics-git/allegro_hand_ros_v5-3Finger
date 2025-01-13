@@ -203,8 +203,10 @@ roslaunch allegro_hand_controllers allegro_hand.launch MOVEIT:=true KEYBOARD:=tr
 ~~~
 
 2. Select joints menu and setup goal position of each joint.
-![Screenshot from 2024-06-26 13-54-38](https://github.com/user-attachments/assets/a4df8c60-8171-4cc8-90a6-ac2132f7e586)
-![Screenshot from 2024-06-26 13-59-29](https://github.com/user-attachments/assets/d0b74bfe-05a6-42a2-95ff-7245901e38b8)
+
+![Screenshot from 2025-01-13 09-50-38](https://github.com/user-attachments/assets/892ac47c-1b6c-4b2c-a39d-2cbeeac8bd63)
+![Screenshot from 2025-01-13 09-50-54](https://github.com/user-attachments/assets/fae61a54-ce56-43ed-a49b-dec268de7ed0)
+
 
 
 3. Select Planning menu and set Start State: `<current>`.
@@ -216,7 +218,7 @@ roslaunch allegro_hand_controllers allegro_hand.launch MOVEIT:=true KEYBOARD:=tr
 	**NOTE : After the log is printed, hand will move to goal joint position.**
 
 6. Use Keyboard `spacebar + Num(0~9)` to save current pose.
-![Screenshot from 2024-06-26 14-40-58](https://github.com/user-attachments/assets/dc22ac65-98ff-4c38-9077-a2fbe1d4eb79)
+![Screenshot from 2025-01-13 09-49-58](https://github.com/user-attachments/assets/f1c5a2f6-8288-4172-9d18-7eb839e89ccb)
 
 	 **NOTE : Pose will be saved with named '(pose + Num). yaml'**.
 
