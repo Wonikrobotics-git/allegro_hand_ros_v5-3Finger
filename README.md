@@ -232,7 +232,8 @@ roslaunch allegro_hand_controllers allegro_hand.launch GUI:=true
 ~~~
 
 2. You can now control the Hand with GUI program.
-![Screenshot from 2024-08-12 10-57-00](https://github.com/user-attachments/assets/161a9a1f-9386-4742-80a4-b425b703483f)
+![Screenshot from 2025-01-13 10-59-32](https://github.com/user-attachments/assets/e7b42ce0-7757-4bf5-8970-0455ff878f95)
+
 
 #### Button instruction
 - Clear log button : Clear log.
