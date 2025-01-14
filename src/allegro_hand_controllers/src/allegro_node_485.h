@@ -38,7 +38,7 @@ protected:
     // Handles defined grasp commands (std_msgs/String).
     ros::Subscriber lib_cmd_sub;
 
-   std::string whichPort;  // Right or left hand.
+   std::string whichPort;  // defualt : "/dev/ttyUSB0".
    int fd = 0;
 };
 

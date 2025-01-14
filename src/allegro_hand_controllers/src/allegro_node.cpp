@@ -144,9 +144,9 @@ void AllegroNode::updateController() {
 
   // Calculate loop time;
   tnow = ros::Time::now();
-  //dt = 1e-9 * (tnow - tstart).nsec;
+  dt = 1e-9 * (tnow - tstart).nsec;
   //printf("%lf\n", dt);
-  dt = ALLEGRO_CONTROL_TIME_INTERVAL;//
+  //dt = ALLEGRO_CONTROL_TIME_INTERVAL;//
   // When running gazebo, sometimes the loop gets called *too* often and dt will
   // be zero. Ensure nothing bad (like divide-by-zero) happens because of this.
   if(dt <= 0) {
@@ -187,40 +187,13 @@ void AllegroNode::updateController() {
       if (OperatingMode == 0) {
 				if ((fingertip_sensor[0] + fingertip_sensor[1] + fingertip_sensor[2]) > 200)
           {
-							f[0] = f[1] = f[2] = force_get;//15.0;
+							f[0] = f[1] = f[2] = force_get;//10.0;
           }
 				else
           {
-							f[0] = f[1] = f[2] = 1;
+							f[0] = f[1] = f[2] = 5.0;
           }
-			}  
-
-      if(fingertip_sensor[0] + fingertip_sensor[1] + fingertip_sensor[2]>100)
-        OperatingMode = 2;
-      else
-        OperatingMode = 1;
-
-      if (OperatingMode == 1) {
-          for(int i =0; i<3;i++)
-          {
-            if(fingertip_sensor[i]>99)
-              f[i] = 1.0 + 0.02 * (100 - fingertip_sensor[i]);
-            else
-              f[i] = 1.0;
-          }
-			}    
-
-      if (OperatingMode == 2) {
-          for(int i =0; i<3;i++)
-          {
-            if(i == 2)
-              f[i] = 1.0 + 0.02 * (100 - fingertip_sensor[i]);
-            else
-              f[i] = 1.0 + 0.02 * (80 - fingertip_sensor[i]);
-          }
-			}    
-      std::cout << "force : "<<"    "<<f[0] <<" " << f[1] <<" "<< f[2]<< std::endl;
-      std::cout << fingertip_sensor[0]<<" "<< fingertip_sensor[1]<<" "<<fingertip_sensor[2]<<std::endl;
+			}     
 
       Rviz_Arrow();
       // calculate control torque:
@@ -233,20 +206,19 @@ void AllegroNode::updateController() {
       // reset joint position update flag:
       canDevice->resetJointInfoReady();
     
-
       // publish joint positions to ROS topic:
       publishData();
    
       frame++;
 
     }
-    // if(frame == 1){
-    //   if(!canDevice->HAND_TYPE_C){
-    //     ROS_ERROR("WRONG TYPE DETECTED!");
-    //     canDevice = 0;
-    //     return;
-    //     }
-    //   }
+    if(frame == 1){
+      if(!canDevice->HAND_TYPE_C){
+        ROS_ERROR("WRONG TYPE DETECTED!");
+        canDevice = 0;
+        return;
+        }
+      }
     
   }
 
@@ -257,7 +229,7 @@ void AllegroNode::updateController() {
   }
 }
 
-// Interrupt-based control is not recommended by Wonik Robotics. I have not tested it.
+// Interrupt-based control is not recommended by Wonik Robotics.
 void AllegroNode::timerCallback(const ros::TimerEvent &event) {
   updateController();
 }

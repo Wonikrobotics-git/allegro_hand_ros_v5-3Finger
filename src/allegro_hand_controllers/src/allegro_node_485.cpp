@@ -76,7 +76,7 @@ void AllegroNode485::libCmdCallback(const std_msgs::String::ConstPtr &msg) {
 void AllegroNode485::initController(const std::string &whichPort) {
   // Initialize RS-485 controller
 
-  const char* portName = whichPort.c_str();//"/dev/ttyUSB0";
+  const char* portName = whichPort.c_str();//default : "/dev/ttyUSB0";
   int baudrate = getBaudrate(115200);
   fd = RS485init(portName, baudrate);
 

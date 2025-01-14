@@ -78,8 +78,6 @@ class AllegroNode {
 
   double desired_torque[DOF_JOINTS] = {0.0};
 
-  std::string whichHand;  // Right or left hand.
-
   // ROS stuff
   ros::NodeHandle nh;
   ros::Publisher  joint_state_pub;
@@ -87,7 +85,7 @@ class AllegroNode {
   ros::Subscriber joint_state_sub;
   ros::Subscriber time_sub;
   ros::Subscriber force_sub;
-   ros::Publisher  marker_pub;
+  ros::Publisher  marker_pub;
 
   // Store the current and desired joint states.
   sensor_msgs::JointState current_joint_state;
@@ -113,7 +111,7 @@ class AllegroNode {
 };
 
 double motion_time = 0.6;//
-double force_get = 1.0;//
+double force_get = 10.0;//
 
 
 

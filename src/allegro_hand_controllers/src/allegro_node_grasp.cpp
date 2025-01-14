@@ -99,7 +99,7 @@ void AllegroNodeGrasp::libCmdCallback(const std_msgs::String::ConstPtr &msg) {
     YAML::Node node = YAML::LoadFile(file_path);
     std::vector<double> positions = node["position"].as<std::vector<double>>();
 
-    for (int i = 0; i < 9 && i < positions.size(); i++) {
+    for (int i = 0; i < DOF_JOINTS && i < positions.size(); i++) {
       desired_position[i] = positions[i];
     }
     
