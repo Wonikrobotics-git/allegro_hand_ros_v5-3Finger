@@ -73,8 +73,8 @@ constexpr uint8_t CMD_GRAVITY[]    = {0x09};       // Gravity compensation
 constexpr uint8_t CMD_POS_READ_1[] = {0x40};       // Read position of finger 1
 constexpr uint8_t CMD_POS_READ_2[] = {0x41};       // Read position of finger 2
 constexpr uint8_t CMD_POS_READ_3[] = {0x42};       // Read position of finger 3
-constexpr uint8_t SAV_POS[]        = {0x10};
-constexpr uint8_t GO_POS[]         = {0x11};
+constexpr uint8_t SAV_POS[]        = {0x10};       // Save current position to Hand memory
+constexpr uint8_t GO_POS[]         = {0x11};       // Load and move hand position to saved position
 ///////////
 
 enum CommandLength {
@@ -82,7 +82,7 @@ enum CommandLength {
     DEVICEINFO = 0x05,
     POSREAD = 0x06,
     WRITEPOS = 0x01,
-    READPOS = 0x26
+    READJOINT = 0x26
 };
 
 // ==========================
