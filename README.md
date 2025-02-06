@@ -23,6 +23,18 @@ So, you can directly connect and communicate with a manipulator that supports RS
 - Official Allegro Hand Website : https://www.allegrohand.com/
 - Community Forum : https://www.allegrohand.com/forum
 
+## Using Hand directly via RS-485 connection without a PC
+
+If you want to use hand directly via RS-485 connection with manipulator or else, you need to set port configures :
+
+- Baudrate : 115200 bps
+- Data bit : 8 bits
+- Stop bit : 1 bit
+- Parity bit : none
+- Timeout : 0
+
+Check out our RS-485 protocol 
+
 ## Packages
 
 **From V5, the hand is fully based on torque controller.**
@@ -30,7 +42,7 @@ So, you can directly connect and communicate with a manipulator that supports RS
 - allegro_hand_controllers : Contain two main nodes for control the hand.
 	- node : Receive encoder data and compute torque using `computeDesiredTorque` based on CAN communication.
 	- grasp : Apply various pre-defined grasps or customized poses based on CAN communication.
-   	- 485 : Apply various pre-defined graps or customized poses based on RS-485 communication
+   	- 485 : Apply various pre-defined graps or customized poses based on RS-485 communication.
 - allegro_hand_description : Urdf,xacro descriptions for the kinematics of the hand, rviz configuration and meshes.
 - allegro_hand_driver : Two main driver for sending and receiving data with the Allegro Hand.
   	- CANAPI : Drivers for CAN communication.
