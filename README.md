@@ -33,7 +33,7 @@ If you want to use hand directly via RS-485 connection with manipulator or else,
 - Parity bit : none
 - Timeout : 0
 
-Check out our RS-485 protocol in manual :
+Check out our RS-485 protocol in manual(Soon be updated)
 
 ## Packages
 
