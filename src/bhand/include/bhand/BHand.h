@@ -47,6 +47,7 @@ enum eMotionType
 	eMotionType_NONE,				///< power off
 	eMotionType_HOME,				///< go to home position for grasp box object
 	eMotionType_SPHERE,				///< go to home position for grasp sphere object
+	eMotionType_ASSEMBLE,			///< go to home position for grasp small object
 	eMotionType_GRAVITY_COMP,		///< finger position move motion (gravity compensation)
 	eMotionType_GRASP_3,			///< grasping using 3 fingers
 	eMotionType_ENVELOP,			///< enveloping grasp
@@ -202,6 +203,7 @@ private:
 	void Motion_GravityComp();
 	void Motion_Grasp3();
 	void Motion_Envelop();
+	void Motion_Assemble();
 
 
 private:
