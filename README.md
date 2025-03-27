@@ -135,8 +135,13 @@ roslaunch allegro_hand_controllers allegro_hand.launch KEYBOARD:=true
 ## Launch file instructions
 
 You can simply control Allegro Hand V5 3finger by launching `allegro_hand.launch`. 
+**CAN Communication**
 ~~~bash
 roslaunch allegro_hand_controllers allegro_hand.launch KEYBOARD:=true
+~~~
+**RS-485**
+~~~bash
+roslaunch allegro_hand_controllers allegro_hand.launch KEYBOARD:=true RS-485:=true
 ~~~
 
 Optional arguments:
