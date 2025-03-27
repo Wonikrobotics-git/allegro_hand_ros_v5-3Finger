@@ -141,7 +141,7 @@ roslaunch allegro_hand_controllers allegro_hand.launch KEYBOARD:=true
 ~~~
 **RS-485**
 ~~~bash
-roslaunch allegro_hand_controllers allegro_hand.launch KEYBOARD:=true RS-485:=true
+roslaunch allegro_hand_controllers allegro_hand.launch KEYBOARD:=true RS485:=true
 ~~~
 
 Optional arguments:
@@ -151,7 +151,7 @@ Optional arguments:
 	MOVEIT:=true|false (default is false)
 	GUI:=true|false (default is false)
 	AUTO_CAN:=true|false (default is false)
-	RS-485:=true|false (default is false)
+	RS485:=true|false (default is false)
 ~~~
 
 - If you want to visualize Allegro Hand on Rviz:
